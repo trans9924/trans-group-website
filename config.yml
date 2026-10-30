@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/trans-group-website
+  branch: main
+  base_url: https://YOUR-OAUTH-SERVER.example.com
+  auth_endpoint: auth
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+site_url: https://YOUR-SITE-NAME.netlify.app
+locale: en
+publish_mode: editorial_workflow
+collections:
+  - name: "blog"
+    label: "Business Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title (English)", name: "title", widget: "string" }
+      - { label: "Title (বাংলা)", name: "title_bn", widget: "string", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: [Business, Entrepreneurship, Technology, Marketing, Finance, Logistics, Leadership] }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Article (English)", name: "body", widget: "markdown" }
+      - { label: "Article (বাংলা)", name: "body_bn", widget: "markdown", required: false }
