@@ -1,0 +1,61 @@
+---
+layout: false
+permalink: blog.html
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Blog | TRANS GROUP</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/">TRANS <span>GROUP</span>
+    <small>BUSINESS • INNOVATION • GROWTH</small>
+  </a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/#businesses">Our Businesses</a>
+    <a href="/admin/">Blog Admin</a>
+  </nav>
+</header>
+
+<main class="section">
+  <p class="eyebrow">BUSINESS KNOWLEDGE / ব্যবসায়িক জ্ঞান</p>
+  <h1>Business Blog</h1>
+  <p>Articles on business, entrepreneurship, technology, marketing and logistics.</p>
+
+  <div class="post-grid">
+    {% for post in collections.blog | reverse %}
+    <article class="post-card">
+      <p class="post-category">{{ post.data.category }}</p>
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      {% if post.data.title_bn %}
+      <h4>{{ post.data.title_bn }}</h4>
+      {% endif %}
+      <p>{{ post.data.description }}</p>
+      {% if post.data.thumbnail %}
+      <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+      {% endif %}
+      <a href="{{ post.url }}">Read more</a>
+    </article>
+    {% endfor %}
+  </div>
+
+  <p lang="bn" style="margin-top:32px">
+    নতুন লেখা প্রকাশ করতে Blog Admin ব্যবহার করুন।
+  </p>
+</main>
+
+<footer>
+  <a class="brand footer-brand" href="/">TRANS <span>GROUP</span>
+    <small>BUSINESS • INNOVATION • GROWTH</small>
+  </a>
+  <p>© TRANS GROUP. All rights reserved.</p>
+  <a href="/admin/">Blog Admin</a>
+</footer>
+</body>
+</html>
