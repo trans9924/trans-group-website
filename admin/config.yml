@@ -2,10 +2,6 @@ backend:
   name: github
   repo: trans9924/trans-group-website
   branch: main
-
-  base_url: https://YOUR-OAUTH-SERVER.example.com
-  auth_endpoint: auth
-
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
