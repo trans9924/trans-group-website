@@ -7,12 +7,8 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-media_library:
-  name: default
-
 site_url: https://trans-group.netlify.app
 locale: en
-
 publish_mode: simple
 
 collections:
