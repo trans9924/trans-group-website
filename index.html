@@ -1,1 +1,395 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TRANS GROUP Blog Admin</title></head><body><script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script></body></html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TRANS GROUP provides nationwide transportation, logistics, goods carrying and vehicle rental services across Bangladesh.">
+  <title>TRANS GROUP | Transportation & Logistics</title>
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    .fleet-info {
+      background: #f3f6f9;
+      padding: 35px;
+      border-radius: 14px;
+      margin-top: 30px;
+    }
+    .fleet-info h3 { color: #10243b; }
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+    .service-item {
+      background: white;
+      padding: 22px;
+      border-radius: 10px;
+      border: 1px solid #e5e9ef;
+    }
+    .contact-details {
+      background: #10243b;
+      color: white;
+      padding: 35px;
+      border-radius: 14px;
+      max-width: 700px;
+      margin: 30px auto 0;
+    }
+    .contact-details a {
+      color: white;
+      text-decoration: none;
+    }
+    .contact-number {
+      padding: 12px 0;
+      border-bottom: 1px solid #52677c;
+      font-size: 18px;
+    }
+    .whatsapp-button {
+      display: inline-block;
+      background: #25D366;
+      color: white !important;
+      padding: 13px 24px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 18px;
+    }
+    .bn-text {
+      line-height: 1.9;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="brand" href="/">
+    TRANS <span>GROUP</span>
+    <small>BUSINESS • INNOVATION • GROWTH</small>
+  </a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#businesses">Our Services</a>
+    <a href="#fleet">Our Fleet</a>
+    <a href="/blog.html">Business Blog</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-cta" href="/admin/">Blog Admin</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">TRANSPORTATION • LOGISTICS • NATIONWIDE</p>
+
+      <h1>Moving Businesses<br>
+        <span>Forward.</span>
+      </h1>
+
+      <p class="lead">
+        Reliable transportation and logistics solutions
+        for businesses across Bangladesh.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="#businesses">
+          Our Services
+        </a>
+        <a class="button secondary" href="#contact">
+          Contact Us
+        </a>
+      </div>
+
+      <p class="bn-intro" lang="bn">
+        নির্ভরযোগ্য পরিবহন ও লজিস্টিকস সেবায়
+        ব্যবসার অগ্রযাত্রায় TRANS GROUP।
+      </p>
+    </div>
+
+    <div class="hero-art">
+      <div class="art-card">
+        <div class="art-top">
+          TRANS GROUP <span>01 / 03</span>
+        </div>
+        <div class="art-bars">
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="art-caption">
+          TRANSPORTATION<br>IN MOTION
+        </div>
+      </div>
+      <div class="circle"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section class="section intro" id="about">
+    <p class="eyebrow">WHO WE ARE / আমরা কারা</p>
+
+    <h2>Transportation & Logistics Group</h2>
+
+    <p>
+      TRANS GROUP is a transportation and logistics-focused
+      business group providing goods transportation and
+      vehicle rental solutions throughout Bangladesh.
+      We work with our own vehicles and external vehicle
+      providers to support different business requirements.
+    </p>
+
+    <p class="bn-text" lang="bn">
+      TRANS GROUP একটি পরিবহন ও লজিস্টিকসকেন্দ্রিক ব্যবসায়িক
+      প্রতিষ্ঠান। আমরা সারা বাংলাদেশে পণ্য পরিবহন এবং
+      গাড়ি ভাড়া সেবা প্রদান করি। নিজস্ব গাড়ির পাশাপাশি
+      গ্রাহকের প্রয়োজন অনুযায়ী বাইরের গাড়ির ব্যবস্থাও করি।
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section businesses" id="businesses">
+
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">WHAT WE DO / আমাদের সেবা</p>
+        <h2>Our Transportation Services</h2>
+      </div>
+      <p>Flexible transportation solutions for businesses.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="business-card">
+        <div class="card-icon">01</div>
+        <h3>Goods Transportation</h3>
+        <p>
+          Nationwide transportation services for all types
+          of lawful commercial goods.
+        </p>
+        <span>GOODS • TRANSPORTATION</span>
+      </article>
+
+      <article class="business-card">
+        <div class="card-icon">02</div>
+        <h3>Truck & Covered Van Rental</h3>
+        <p>
+          Vehicle rental solutions for business and
+          commercial transportation requirements.
+        </p>
+        <span>TRUCK • COVERED VAN</span>
+      </article>
+
+      <article class="business-card">
+        <div class="card-icon">03</div>
+        <h3>Logistics Coordination</h3>
+        <p>
+          Arranging additional vehicles through our
+          external transport network when required.
+        </p>
+        <span>LOGISTICS • VEHICLE NETWORK</span>
+      </article>
+
+    </div>
+
+    <p class="bn-text" lang="bn">
+      আমরা সারা বাংলাদেশে সব ধরনের বৈধ বাণিজ্যিক পণ্য
+      পরিবহন, ট্রাক ও কাভার্ড ভ্যান ভাড়া এবং প্রয়োজন অনুযায়ী
+      অতিরিক্ত গাড়ির ব্যবস্থা করে থাকি।
+    </p>
+
+  </section>
+
+  <!-- FLEET -->
+  <section class="section" id="fleet">
+
+    <p class="eyebrow">OUR VEHICLES / আমাদের গাড়ি</p>
+    <h2>Our Fleet & Transport Network</h2>
+
+    <div class="fleet-info">
+
+      <h3>Our Own Fleet</h3>
+
+      <p>
+        TRANS GROUP operates its own transportation vehicles,
+        including covered vans, to support goods transportation
+        requirements.
+      </p>
+
+      <p class="bn-text" lang="bn">
+        TRANS GROUP-এর নিজস্ব পরিবহন গাড়ি রয়েছে।
+        এর মধ্যে কাভার্ড ভ্যান রয়েছে, যা পণ্য পরিবহন
+        সেবায় ব্যবহৃত হয়।
+      </p>
+
+      <div class="service-list">
+
+        <div class="service-item">
+          <h3>Own Vehicles</h3>
+          <p>নিজস্ব পরিবহন গাড়ি</p>
+        </div>
+
+        <div class="service-item">
+          <h3>Covered Van</h3>
+          <p>কাভার্ড ভ্যান পরিবহন</p>
+        </div>
+
+        <div class="service-item">
+          <h3>External Vehicle Network</h3>
+          <p>প্রয়োজনে বাইরের গাড়ির ব্যবস্থা</p>
+        </div>
+
+      </div>
+
+      <h3 style="margin-top:30px;">Nationwide Service Coverage</h3>
+
+      <p>
+        Transportation services across Bangladesh according
+        to customer requirements.
+      </p>
+
+      <p lang="bn">
+        গ্রাহকের চাহিদা অনুযায়ী সারা বাংলাদেশে পরিবহন সেবা।
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- BUSINESS VALUES -->
+  <section class="section intro">
+    <p class="eyebrow">OUR COMMITMENT / আমাদের অঙ্গীকার</p>
+
+    <h2>Moving Forward with Reliability</h2>
+
+    <p>
+      We believe that reliability, commitment,
+      professional service and customer satisfaction
+      are essential to successful business relationships.
+    </p>
+
+    <p lang="bn">
+      নির্ভরযোগ্যতা, প্রতিশ্রুতি, পেশাদার সেবা এবং
+      গ্রাহক সন্তুষ্টিকে আমরা গুরুত্ব দিই।
+    </p>
+  </section>
+
+  <!-- BLOG -->
+  <section class="section insights" id="insights">
+
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">IDEAS & KNOWLEDGE / ব্যবসায়িক ব্লগ</p>
+        <h2>Business Insights</h2>
+      </div>
+
+      <a class="text-link" href="/blog.html">
+        View All Articles →
+      </a>
+    </div>
+
+    <div class="post-grid">
+
+      <article class="post-card">
+        <p class="post-category">LOGISTICS</p>
+        <h3>Reliable Transportation in Business</h3>
+        <p>
+          Discover how reliable transportation supports
+          business operations and customer satisfaction.
+        </p>
+        <a href="/blog/reliable-transportation/">
+          Read Article →
+        </a>
+      </article>
+
+      <article class="post-card">
+        <p class="post-category">TRANSPORTATION</p>
+        <h3>Transportation & Logistics</h3>
+        <p>
+          Learn about transportation services and
+          logistics coordination.
+        </p>
+        <a href="/blog.html">Explore the Blog →</a>
+      </article>
+
+    </div>
+
+    <p class="bn-text" lang="bn">
+      ব্যবসা ও পরিবহন সম্পর্কিত নতুন তথ্য এবং
+      প্রয়োজনীয় আর্টিকেল পড়তে আমাদের ব্লগ দেখুন।
+    </p>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+
+    <div style="text-align:center;">
+      <p class="eyebrow">LET'S CONNECT / যোগাযোগ</p>
+      <h2>Contact TRANS GROUP</h2>
+
+      <p>
+        Need transportation or vehicle rental services?
+        Contact our team for business inquiries.
+      </p>
+
+      <p lang="bn">
+        পণ্য পরিবহন অথবা গাড়ি ভাড়া সেবার জন্য
+        আমাদের সঙ্গে যোগাযোগ করুন।
+      </p>
+    </div>
+
+    <div class="contact-details">
+
+      <h3>Business Inquiry</h3>
+
+      <p>Call us for transportation and logistics services.</p>
+
+      <div class="contact-number">
+        📞 <a href="tel:01818196136">01818196136</a>
+      </div>
+
+      <div class="contact-number">
+        📞 <a href="tel:01612285898">01612285898</a>
+        <small> — WhatsApp Business</small>
+      </div>
+
+      <div class="contact-number">
+        📞 <a href="tel:01971077466">01971077466</a>
+      </div>
+
+      <a class="whatsapp-button"
+         href="https://wa.me/8801612285898"
+         target="_blank"
+         rel="noopener">
+        Chat on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <a class="brand footer-brand" href="/">
+    TRANS <span>GROUP</span>
+    <small>BUSINESS • INNOVATION • GROWTH</small>
+  </a>
+
+  <p>
+    © <span id="year"></span> TRANS GROUP.
+    All rights reserved.
+  </p>
+
+  <a href="/blog.html">Business Blog</a>
+  <a href="/admin/">Blog Admin</a>
+</footer>
+
+<script>
+  document.getElementById('year').textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
