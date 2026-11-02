@@ -2,7 +2,7 @@ backend:
   name: github
   repo: trans9924/trans-group-website
   branch: main
-media_folder: "images/uploads"
+media_folder: "/images/uploads"
 public_folder: "/images/uploads"
 
 site_url: https://trans-group.netlify.app
