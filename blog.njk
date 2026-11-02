@@ -9,53 +9,211 @@ permalink: blog.html
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Business Blog | TRANS GROUP</title>
+  <meta name="description" content="Business insights, transportation, logistics and innovation from TRANS GROUP.">
   <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    .blog-hero {
+      padding: 75px 24px;
+      text-align: center;
+      background: linear-gradient(135deg, #10243b, #245477);
+      color: white;
+      border-radius: 16px;
+      margin-bottom: 45px;
+    }
+    .blog-hero .eyebrow {
+      color: #d8e8f5;
+      letter-spacing: 2px;
+    }
+    .blog-hero h1 {
+      font-size: clamp(36px, 6vw, 58px);
+      margin: 12px 0;
+    }
+    .blog-hero p {
+      max-width: 650px;
+      margin: 12px auto;
+      line-height: 1.8;
+    }
+    .blog-admin-link {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 25px;
+      background: white;
+      color: #10243b;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .blog-intro {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .blog-intro h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .post-card {
+      background: white;
+      border: 1px solid #e5e9ef;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.05);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .post-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .post-category {
+      color: #28618a;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .post-card h3 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.4;
+    }
+    .post-card h3 a {
+      color: #172b40;
+      text-decoration: none;
+    }
+    .post-card h3 a:hover {
+      color: #28618a;
+    }
+    .post-card h4 {
+      margin: 0;
+      color: #536273;
+      font-size: 17px;
+    }
+    .post-card p {
+      line-height: 1.7;
+    }
+    .read-more {
+      color: #205b87;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: auto;
+    }
+    .blog-empty {
+      text-align: center;
+      padding: 35px;
+      background: #f5f7fa;
+      border-radius: 10px;
+    }
+    .blog-note {
+      text-align: center;
+      margin: 45px 0 15px;
+      padding: 25px;
+      background: #f3f6f9;
+      border-radius: 10px;
+    }
+    @media (max-width: 600px) {
+      .blog-hero {
+        padding: 50px 18px;
+      }
+      .post-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 <header class="site-header">
-  <a class="brand" href="/">TRANS <span>GROUP</span>
+  <a class="brand" href="/">
+    TRANS <span>GROUP</span>
     <small>BUSINESS • INNOVATION • GROWTH</small>
   </a>
   <nav>
     <a href="/">Home</a>
     <a href="/#businesses">Our Businesses</a>
+    <a href="/blog.html">Business Blog</a>
     <a href="/admin/">Blog Admin</a>
   </nav>
 </header>
 
 <main class="section">
-  <p class="eyebrow">BUSINESS KNOWLEDGE / ব্যবসায়িক জ্ঞান</p>
-  <h1>Business Blog</h1>
-  <p>Articles on business, entrepreneurship, technology, marketing and logistics.</p>
 
+  <section class="blog-hero">
+    <p class="eyebrow">TRANS GROUP • INSIGHTS & IDEAS</p>
+    <h1>Business Blog</h1>
+    <p>
+      Discover ideas, knowledge and practical insights about business,
+      transportation, logistics, technology and innovation.
+    </p>
+    <p lang="bn">
+      ব্যবসা, পরিবহন, প্রযুক্তি ও উদ্ভাবন সম্পর্কে জানুন
+      নতুন ধারণা এবং প্রয়োজনীয় তথ্য।
+    </p>
+    <a class="blog-admin-link" href="/admin/">Publish a New Article</a>
+  </section>
+
+  <section class="blog-intro">
+    <h2>Latest Articles</h2>
+    <p>Explore our latest business insights and updates.</p>
+  </section>
+
+  {% if collections.blog.length %}
   <div class="post-grid">
     {% for post in collections.blog | reverse %}
     <article class="post-card">
-      <p class="post-category">{{ post.data.category }}</p>
-      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      {% if post.data.title_bn %}
-      <h4>{{ post.data.title_bn }}</h4>
-      {% endif %}
-      <p>{{ post.data.description }}</p>
+
       {% if post.data.thumbnail %}
       <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
       {% endif %}
-      <a href="{{ post.url }}">Read more</a>
+
+      <p class="post-category">{{ post.data.category }}</p>
+
+      <h3>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h3>
+
+      {% if post.data.title_bn %}
+      <h4 lang="bn">{{ post.data.title_bn }}</h4>
+      {% endif %}
+
+      <p>{{ post.data.description }}</p>
+
+      <a class="read-more" href="{{ post.url }}">Read Article →</a>
+
     </article>
     {% endfor %}
   </div>
+  {% else %}
+  <div class="blog-empty">
+    <h3>Articles coming soon</h3>
+    <p>New business articles will be published here.</p>
+  </div>
+  {% endif %}
 
-  <p lang="bn" style="margin-top:32px">
-    নতুন লেখা প্রকাশ করতে Blog Admin ব্যবহার করুন।
-  </p>
+  <section class="blog-note">
+    <h3>Have something to learn?</h3>
+    <p lang="bn">নতুন ব্যবসায়িক লেখা ও তথ্য পেতে আমাদের ব্লগের সঙ্গে থাকুন।</p>
+  </section>
+
 </main>
 
 <footer>
-  <a class="brand footer-brand" href="/">TRANS <span>GROUP</span>
+  <a class="brand footer-brand" href="/">
+    TRANS <span>GROUP</span>
     <small>BUSINESS • INNOVATION • GROWTH</small>
   </a>
   <p>© TRANS GROUP. All rights reserved.</p>
   <a href="/admin/">Blog Admin</a>
 </footer>
+
 </body>
 </html>
