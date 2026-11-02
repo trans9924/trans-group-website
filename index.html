@@ -15,19 +15,47 @@
       border-radius: 14px;
       margin-top: 30px;
     }
+
     .fleet-info h3 { color: #10243b; }
+
     .service-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       margin-top: 25px;
     }
+
     .service-item {
       background: white;
       padding: 22px;
       border-radius: 10px;
       border: 1px solid #e5e9ef;
     }
+
+    .fleet-card {
+      background: white;
+      border: 1px solid #e5e9ef;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+      overflow: hidden;
+    }
+
+    .fleet-photo {
+      display: block;
+      width: 100%;
+      max-width: 750px;
+      height: auto;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 0 auto 20px;
+    }
+
+    .fleet-card h3 {
+      margin-top: 10px;
+    }
+
     .contact-details {
       background: #10243b;
       color: white;
@@ -36,15 +64,18 @@
       max-width: 700px;
       margin: 30px auto 0;
     }
+
     .contact-details a {
       color: white;
       text-decoration: none;
     }
+
     .contact-number {
       padding: 12px 0;
       border-bottom: 1px solid #52677c;
       font-size: 18px;
     }
+
     .whatsapp-button {
       display: inline-block;
       background: #25D366;
@@ -55,8 +86,20 @@
       font-weight: bold;
       margin-top: 18px;
     }
+
     .bn-text {
       line-height: 1.9;
+    }
+
+    @media (max-width: 600px) {
+      .fleet-info,
+      .contact-details {
+        padding: 22px;
+      }
+
+      .fleet-photo {
+        max-height: 280px;
+      }
     }
   </style>
 </head>
@@ -95,12 +138,8 @@
       </p>
 
       <div class="actions">
-        <a class="button primary" href="#businesses">
-          Our Services
-        </a>
-        <a class="button secondary" href="#contact">
-          Contact Us
-        </a>
+        <a class="button primary" href="#businesses">Our Services</a>
+        <a class="button secondary" href="#contact">Contact Us</a>
       </div>
 
       <p class="bn-intro" lang="bn">
@@ -212,15 +251,39 @@
 
       <p>
         TRANS GROUP operates its own transportation vehicles,
-        including covered vans, to support goods transportation
-        requirements.
+        including covered vans and an Ashok Leyland container
+        truck, to support goods transportation requirements
+        across Bangladesh.
       </p>
 
       <p class="bn-text" lang="bn">
         TRANS GROUP-এর নিজস্ব পরিবহন গাড়ি রয়েছে।
-        এর মধ্যে কাভার্ড ভ্যান রয়েছে, যা পণ্য পরিবহন
-        সেবায় ব্যবহৃত হয়।
+        এর মধ্যে কাভার্ড ভ্যান এবং একটি Ashok Leyland
+        কনটেইনার ট্রাক রয়েছে।
       </p>
+
+      <!-- OWN CONTAINER TRUCK -->
+      <div class="fleet-card">
+
+        <img
+          class="fleet-photo"
+          src="/images/uploads/CHATTA%20METRO%20TA%2011-4106.jpg"
+          alt="TRANS GROUP Ashok Leyland Container Truck"
+          loading="lazy"
+        >
+
+        <h3>ASHOK LEYLAND CONTAINER TRUCK</h3>
+
+        <p>
+          Registration No:
+          <strong>CHATTA METRO TA-11-4106</strong>
+        </p>
+
+        <p class="bn-text" lang="bn">
+          ট্রান্স গ্রুপের নিজস্ব কনটেইনার ট্রাক।
+        </p>
+
+      </div>
 
       <div class="service-list">
 
@@ -248,7 +311,7 @@
         to customer requirements.
       </p>
 
-      <p lang="bn">
+      <p class="bn-text" lang="bn">
         গ্রাহকের চাহিদা অনুযায়ী সারা বাংলাদেশে পরিবহন সেবা।
       </p>
 
@@ -268,7 +331,7 @@
       are essential to successful business relationships.
     </p>
 
-    <p lang="bn">
+    <p class="bn-text" lang="bn">
       নির্ভরযোগ্যতা, প্রতিশ্রুতি, পেশাদার সেবা এবং
       গ্রাহক সন্তুষ্টিকে আমরা গুরুত্ব দিই।
     </p>
@@ -333,7 +396,7 @@
         Contact our team for business inquiries.
       </p>
 
-      <p lang="bn">
+      <p class="bn-text" lang="bn">
         পণ্য পরিবহন অথবা গাড়ি ভাড়া সেবার জন্য
         আমাদের সঙ্গে যোগাযোগ করুন।
       </p>
